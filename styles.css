@@ -1,0 +1,223 @@
+/* ===============================
+   GLOBAL PAGE STYLING
+================================ */
+
+body {
+  background: linear-gradient(
+    -45deg,
+    #0f2027,
+    #203a43,
+    #2c5364,
+    #00c6ff,
+    #6a11cb,
+    #2575fc
+  );
+  background-size: 600% 600%;
+  animation: gradientMove 8s ease infinite;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===============================
+   MAIN LAYOUT
+================================ */
+
+.main-container {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(0, 140, 255, 0.15);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+header {
+  padding: 10px 10px 20px;
+}
+
+main section {
+  margin-bottom: 3rem;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar-brand {
+  color: #3a3f45 !important;
+}
+
+.nav-link {
+  color: #3a3f45 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #2b2f34 !important;
+}
+
+.nav-link.active {
+  color: #111827 !important;
+  font-weight: 700;
+  border-bottom: 2px solid #3a3f45;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero-image {
+  width: 210px;
+  height: 210px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 6px solid white;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin: 0 auto;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(255, 255, 255, 0.5),
+    0 0 45px rgba(0, 140, 255, 0.35);
+}
+
+/* ===============================
+   HERO / HEADER TEXT
+================================ */
+
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-buttons .btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #3a3f45;
+  border-color: #3a3f45;
+}
+
+.btn-primary:hover {
+  background-color: #2b2f34;
+  border-color: #2b2f34;
+}
+
+.btn-outline-primary {
+  color: #3a3f45;
+  border-color: #3a3f45;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3a3f45;
+  border-color: #3a3f45;
+  color: white;
+}
+
+.card .btn {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   FEATURE BANNER
+================================ */
+
+.bg-primary {
+  background: linear-gradient(
+    135deg,
+    #3a3f45,
+    #2c2f33
+  ) !important;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ===============================
+   CARDS
+================================ */
+
+.card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   COLLAPSIBLE DETAIL BOXES
+================================ */
+
+.detail-box {
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3a3f45;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+  margin-top: 60px;
+}
+
+/* ===============================
+   RESPONSIVE TWEAKS
+================================ */
+
+@media (max-width: 767.98px) {
+  .main-container {
+    padding: 25px;
+  }
+
+  .hero-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .nav-link.active {
+    border-bottom: none;
+  }
+}
