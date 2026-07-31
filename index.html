@@ -74,10 +74,10 @@
     </nav>
 
     <header class="home-hero mb-5">
-      <div class="row hero-row align-items-start">
+      <div class="row hero-row align-items-center">
 
-        <div class="col-12 col-lg-7 offset-lg-5 order-1 brand-column text-center text-lg-left">
-          <section class="home-brand-showcase" aria-label="Bennie's Digital Solutions brand">
+        <div class="col-12 order-1 d-lg-none brand-column-mobile text-center">
+          <section class="home-brand-showcase home-brand-showcase--mobile" aria-label="Bennie's Digital Solutions brand">
             <img
               src="images/branding/bd-full-trans.png"
               class="home-brand-showcase__image"
@@ -86,7 +86,7 @@
           </section>
         </div>
 
-        <div class="col-12 col-lg-5 text-center mb-4 mb-lg-0 order-2 photo-column">
+        <div class="col-12 col-lg-5 text-center mb-4 mb-lg-0 order-2 order-lg-1 photo-column">
           <img
             src="IMG_4742.jpg"
             class="hero-image"
@@ -94,7 +94,14 @@
           >
         </div>
 
-        <div class="col-12 col-lg-7 text-center text-lg-left order-3 intro-column">
+        <div class="col-12 col-lg-7 text-center text-lg-left order-3 order-lg-2 intro-column">
+          <section class="home-brand-showcase home-brand-showcase--desktop d-none d-lg-flex" aria-label="Bennie's Digital Solutions brand">
+            <img
+              src="images/branding/bd-full-trans.png"
+              class="home-brand-showcase__image"
+              alt="Bennie's Digital Solutions"
+            >
+          </section>
           <p class="text-uppercase text-muted font-weight-bold mb-2">Portfolio & digital solutions</p>
           <h1 class="mb-3">Joshua Alexander Bennie</h1>
 
