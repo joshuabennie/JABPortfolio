@@ -67,14 +67,12 @@ main section {
 ================================ */
 
 .navbar {
-  background: rgba(7, 19, 31, 0.78) !important;
-  border: 1px solid rgba(199, 169, 77, 0.14);
+  background: transparent !important;
+  border: 1px solid transparent;
   border-radius: 16px;
-  padding: 0.85rem 1rem;
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(14px);
+  padding: 1rem 1.1rem;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .navbar-brand {
@@ -82,21 +80,22 @@ main section {
   font-weight: 800;
   letter-spacing: 0.03em;
   position: relative;
-  padding-left: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
 }
 
 .navbar-brand::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 4px;
-  height: 22px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #58798c, #c7a94d);
-  transform: translateY(-50%);
+  content: none;
 }
 
+.brand-logo__image {
+  display: block;
+  width: auto;
+  height: 68px;
+  max-width: 280px;
+  object-fit: contain;
+}
 .navbar-toggler {
   border: 1px solid rgba(199, 169, 77, 0.22);
   border-radius: 10px;
@@ -216,13 +215,16 @@ header p {
 }
 
 .home-page .home-hero {
-  padding: 24px 8px 12px;
+  padding: 8px 8px 12px;
 }
 
 .home-page .hero-row {
   min-height: 360px;
 }
 
+.home-page .hero-row .col-lg-5 {
+  padding-top: 14.75rem;
+}
 .home-page .hero-image {
   width: 240px;
   height: 240px;
@@ -250,6 +252,19 @@ header p {
   margin-bottom: 3.5rem;
 }
 
+.home-page .home-brand-showcase {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 0 1.25rem;
+}
+
+.home-brand-showcase__image {
+  display: block;
+  width: min(100%, 500px);
+  height: auto;
+  object-fit: contain;
+  transform: translateX(-8.5rem);
+}
 .home-page .focus-section {
   padding-top: 0.25rem;
 }
@@ -578,8 +593,9 @@ footer a:hover {
     padding: 0.75rem;
   }
 
-  .navbar-brand {
-    font-size: 0.98rem;
+  .brand-logo__image {
+    height: 54px;
+    max-width: 220px;
   }
 
   .navbar-collapse {
@@ -607,6 +623,9 @@ footer a:hover {
     padding-top: 12px;
   }
 
+  .home-page .hero-row .col-lg-5 {
+    padding-top: 0;
+  }
   .home-page .hero-row {
     min-height: auto;
   }
@@ -632,6 +651,15 @@ footer a:hover {
     margin-bottom: 2.6rem;
   }
 
+  .home-page .home-brand-showcase {
+    justify-content: center;
+    padding: 0 0 1rem;
+  }
+
+  .home-brand-showcase__image {
+    width: min(100%, 340px);
+    transform: none;
+  }
   .home-page .focus-card .card-body {
     min-height: auto;
     padding: 1.45rem 1.2rem;
