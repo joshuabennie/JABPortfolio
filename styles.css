@@ -525,6 +525,41 @@ header p {
   color: #f1efe8;
 }
 
+
+/* ===============================
+   INQUIRY FORM
+================================ */
+
+.inquiry-form-card .card-body {
+  padding: 2rem;
+}
+
+.inquiry-form label {
+  color: #f1efe8;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.inquiry-form .form-control,
+.inquiry-form .custom-select {
+  color: #f1efe8;
+  background-color: rgba(7, 19, 31, 0.76);
+  border: 1px solid rgba(199, 169, 77, 0.22);
+  border-radius: 8px;
+}
+
+.inquiry-form .form-control:focus,
+.inquiry-form .custom-select:focus {
+  color: #f1efe8;
+  background-color: rgba(7, 19, 31, 0.92);
+  border-color: #c7a94d;
+  box-shadow: 0 0 0 0.2rem rgba(199, 169, 77, 0.18);
+}
+
+.inquiry-form .form-control::placeholder {
+  color: #8ea0ad;
+}
+
 /* ===============================
    FOOTER
 ================================ */

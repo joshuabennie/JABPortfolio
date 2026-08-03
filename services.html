@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Joshua Bennie</title>
 
+
+  <link rel="icon" type="image/png" sizes="512x512" href="images/branding/favicon-512.png">
+  <link rel="apple-touch-icon" href="images/branding/favicon-512.png">
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -18,7 +21,13 @@
   <div class="container main-container">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white rounded shadow-sm mb-4">
-      <a class="navbar-brand font-weight-bold" href="index.html">Bennie's Digital Solutions</a>
+      <a class="navbar-brand brand-logo d-flex align-items-center" href="index.html" aria-label="Bennie's Digital Solutions home">
+        <img
+          src="images/branding/bd-mark.png"
+          class="brand-logo__image"
+          alt="Bennie's Digital Solutions mark"
+        >
+      </a>
 
       <button
         class="navbar-toggler"
@@ -53,12 +62,6 @@
 
           <li class="nav-item active">
             <a class="nav-link" href="services.html">Services</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="Joshua_Bennie_Resume.pdf" target="_blank">
-              Resume
-            </a>
           </li>
 
           <li class="nav-item">
@@ -294,19 +297,85 @@
         </div>
       </section>
 
-      <section class="mt-5 text-center">
-        <h3 class="mb-3">Let&rsquo;s Connect</h3>
-        <p class="mb-4">
-          If you need help with a website, redesign, reporting, automation, or technical solution, I&rsquo;d be glad to connect and discuss your needs.
-        </p>
 
-        <a href="mailto:joshua.abennie@gmail.com" class="btn btn-primary mr-2">
-          Contact Me
-        </a>
+      <section class="inquiry-section mt-5" id="project-inquiry">
+        <div class="card inquiry-form-card shadow-sm">
+          <div class="card-body">
+            <div class="row align-items-start">
+              <div class="col-lg-5 mb-4 mb-lg-0">
+                <p class="text-muted font-weight-bold mb-2">Project Inquiry</p>
+                <h3 class="mb-3">Tell me what you need built.</h3>
+                <p class="mb-0">
+                  Share a few details about your website, automation, reporting, or digital support needs so I can understand the scope before we connect.
+                </p>
+              </div>
 
-        <a href="Joshua_Bennie_Resume.pdf" target="_blank" class="btn btn-outline-primary">
-          View Resume
-        </a>
+              <div class="col-lg-7">
+                <form class="inquiry-form" action="mailto:joshua.abennie@gmail.com?subject=Project%20Inquiry" method="post" enctype="text/plain">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inquiry-name">Name</label>
+                      <input type="text" class="form-control" id="inquiry-name" name="Name" autocomplete="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inquiry-email">Email</label>
+                      <input type="email" class="form-control" id="inquiry-email" name="Email" autocomplete="email" required>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inquiry-phone">Phone</label>
+                      <input type="tel" class="form-control" id="inquiry-phone" name="Phone" autocomplete="tel">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inquiry-service">Project Type</label>
+                      <select class="custom-select" id="inquiry-service" name="Project Type" required>
+                        <option value="">Select one</option>
+                        <option>New website</option>
+                        <option>Website redesign</option>
+                        <option>Business automation</option>
+                        <option>SQL, data, or reporting</option>
+                        <option>General tech support</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inquiry-budget">Estimated Budget</label>
+                      <select class="custom-select" id="inquiry-budget" name="Estimated Budget">
+                        <option value="">Select range</option>
+                        <option>Under $500</option>
+                        <option>$500 - $1,000</option>
+                        <option>$1,000 - $2,500</option>
+                        <option>$2,500+</option>
+                        <option>Not sure yet</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inquiry-timeline">Timeline</label>
+                      <select class="custom-select" id="inquiry-timeline" name="Timeline">
+                        <option value="">Select timeline</option>
+                        <option>As soon as possible</option>
+                        <option>Within 2-4 weeks</option>
+                        <option>Within 1-3 months</option>
+                        <option>Still planning</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inquiry-details">What are you trying to accomplish?</label>
+                    <textarea class="form-control" id="inquiry-details" name="Project Details" rows="5" placeholder="Tell me about your goals, current website or tools, must-have features, and anything you already have ready." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
     </main>
