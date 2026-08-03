@@ -166,7 +166,7 @@ main section {
   border-radius: 12px;
   border: 5px solid rgba(241, 239, 232, 0.9);
   object-fit: cover;
-  object-position: center top;
+  object-position: center 8%;
   display: block;
   margin: 0 auto;
   box-shadow:
@@ -235,9 +235,10 @@ header p {
 
 .home-page .hero-image {
   width: min(100%, 240px);
-  height: auto;
+  height: min(calc(100vw - 2rem), 240px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center 50%;
 }
 
 .home-page h1 {
@@ -593,6 +594,14 @@ footer a:hover {
   font-weight: 700;
 }
 
+@media (min-width: 992px) {
+  .home-page .photo-column {
+    padding-top: 0;
+  }
+  .home-page .photo-column .hero-image {
+    margin-top: 20rem !important;
+  }
+}
 /* ===============================
    RESPONSIVE TWEAKS
 ================================ */
@@ -618,9 +627,10 @@ footer a:hover {
 
   .hero-image {
     width: min(100%, 160px);
-    height: auto;
+    height: 160px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    object-position: center 8%;
   }
 
   .hero-buttons .btn {
